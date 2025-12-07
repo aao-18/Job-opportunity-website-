@@ -1,0 +1,157 @@
+:root {
+    --background: #ffffff;
+    --dark-blue: #0d1b4c;
+    --white-text: #fff;
+    --ligh-blue: #296eff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: var(--dark-blue);
+    color: var(--white-text);
+}
+
+header .logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--white-text);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.signup {
+    background: var(--ligh-blue);
+    color: var(--white-text);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+}
+
+/* .side-menu { */
+/*         
+            Off-canvas left side menu:
+            - Hidden by default (left: -280px)
+            - Slides in when .open is added
+            - Fixed position, covers full height
+        */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 260px;
+    height: 100vh;
+    background: var(--dark-blue);
+    color: var(--white-text);
+    z-index: 1000;
+    transition: left 0.28s cubic-bezier(.2,.8,.2,1);
+    padding-top: 60px;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+}
+
+.side-menu.open {
+    /* When menu is open, slide in to left: 0 */
+    left: 0;
+}
+
+.side-menu .close-btn{
+    /* Close (×) button inside menu */
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: var(--white-text);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.side-menu ul{
+    /* Remove default list style, add padding */
+    list-style: none;
+    padding: 0 18px;
+}
+
+.side-menu ul li a{
+    /* Style for menu links */
+    display: block;
+    padding: 12px 8px;
+    color: var(--white-text);
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.side-menu ul li a:hover{
+    /* Highlight on hover */
+    background: rgba(255,255,255,0.04);
+}
+
+.menu-overlay{
+        /*
+            Overlay:
+            - Covers the page when menu is open
+            - Fades in/out with opacity/visibility
+        */
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
+        z-index: 900;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .28s ease, visibility .28s ease;
+}
+
+.menu-overlay.show{
+    /* Show overlay when menu is open */
+    opacity: 1;
+    visibility: visible;
+}
+
+/*
+    When menu is open, hamburger icon changes color
+*/
+.hamburger.active{
+        color: var(--ligh-blue);
+}
+

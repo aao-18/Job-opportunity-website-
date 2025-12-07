@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Poppins, sans-serif;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: #0d1b4c;
+        color: #fff;
+      }
+      header h2 {
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .nav-bar {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .nav-bar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        margin: 5px;
+      }
+
+      .signup {
+        background: #296eff;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 28px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 40px;
+        flex-wrap: wrap;
+      }
+      .hello {
+        background: #2eca8b;
+        max-width: 540px;
+      }
+
+      .hello p {
+        margin-bottom: 10px;
+      }
+      .search-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        background-color: lightblue;
+      }
+
+      .search-box div {
+        border: 1px solid olive;
+
+        flex: 1;
+        min-width: 220px;
+        padding: 12px;
+        border-radius: 6px;
+      }
+      .world {
+        width: 380px;
+        max-width: 100%;
+        margin-top: 50px;
+        height: 300px;
+        background: #3f3f45;
+        background: linear-gradient(
+          221deg,
+          rgba(63, 63, 69, 1) 1%,
+          rgba(28, 28, 102, 1) 26%,
+          rgba(9, 9, 121, 1) 50%,
+          rgba(4, 120, 194, 1) 77%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+
+      .cat {
+        padding: 40px;
+        text-align: center;
+      }
+
+      .try-grid {
+        margin: 50px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+      .catbox {
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .grid1 {
+        background: hwb(252 30% 0%);
+      }
+      .grid2 {
+        background: #2eca8b;
+      }
+
+      .grid3 {
+        background: #50b7ff;
+      }
+      .grid4 {
+        background: #ff8a3d;
+      }
+      .grid5 {
+        background: #296eff;
+      }
+      .grid6 {
+        background: #0d1b4c;
+      }
+      .grid7 {
+        background: #222;
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+        .nav-bar {
+          display: none;
+        }
+      }
+    </style>
+    <title>responsive practice</title>
+  </head>
+  <body>
+    <header>
+      <h2>job opportunity system</h2>
+
+      <nav class="nav-bar">
+        <div>
+          <a href="#">Home</a>
+          <a href="#">Jobs</a>
+          <a href="#">Companies</a>
+          <a href="#">Sign In</a>
+          <button class="signup">Sign Up</button>
+        </div>
+      </nav>
+      <div class="hamburger">&#9776;</div>
+    </header>
+    <div class="container">
+      <div class="hello">
+        <p>
+          hero text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Asperiores ipsum autem labore, veniam, expedita sapiente blanditiis
+          culpa voluptas recusandae fugiat delectus dicta sint totam porro a,
+          ipsam rem molestiae sit?
+        </p>
+        <div class="search-box">
+          <div>search box</div>
+          <div>search box</div>
+        </div>
+      </div>
+      <div class="world">world</div>
+    </div>
+    <div class="cat">
+      <div class="try-grid">
+        <div class="catbox grid1">GRID 1</div>
+        <div class="catbox grid2">GRID 2</div>
+        <div class="catbox grid3">GRID 3</div>
+        <div class="catbox grid4">GRID 4</div>
+        <div class="catbox grid5">GRID 5</div>
+        <div class="catbox grid6">GRID 6</div>
+        <div class="catbox grid7">GRID 7</div>
+      </div>
+    </div>
+  </body>
+</html>
