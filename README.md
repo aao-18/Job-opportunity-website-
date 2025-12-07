@@ -7,7 +7,6 @@ Users can search and apply for jobs, while employers can post new job openings.
 
 # Team members 
 
-- Steve Tabong Andieh
 - Anyangwe Akwi OKawa
 - Obi Theomark Enow-Ayuk
 - Wiysahnyuy Abubaka Sedig
