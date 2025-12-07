@@ -32,9 +32,18 @@ document.addEventListener("click", (e) => {
 // ================================
 const signupBtn = document.getElementById("signup-btn");
 const signupBtn1 = document.getElementById("signup-btn1");
+const signupBtn2 = document.getElementById("signup-btn2");
 
 if (signupBtn1) {
     signupBtn1.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // simple redirect
+        window.location.href = "signup.html";
+    });
+}
+if (signupBtn2) {
+    signupBtn2.addEventListener("click", function (event) {
         event.preventDefault();
 
         // simple redirect
@@ -62,10 +71,3 @@ if (loginBtn) {
         window.location.href = "home.html";
     });
 }
-// if (navsignupBtn) {
-//     loginBtn.addEventListener("click", function (event) {
-//         event.preventDefault();
-
-//         window.location.href = "signup.html";
-//     });
-// }
