@@ -1,1 +1,0 @@
-Applying hamburger to left menu changes: home copy.html and header.css edits.

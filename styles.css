@@ -122,30 +122,6 @@ a:hover {
   background: var(--cat-orange);
 }
 
-.hidden {
-  background-color: var(--dark-blue);
-  height: 100vh;
-  width: 100%;
-  max-width: 450PX;
-  position: fixed;
-  top: 0;
-  /* right: -450PX; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 3rem;
-  transition: 0.4s ease;
-}
-
-.hidden.active {
-  right: 0;
-}
-.menu-btn {
-  position: relative;
-}
-
 
 @media(max-width: 768px){
   nav{
