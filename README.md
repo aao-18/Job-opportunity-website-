@@ -31,4 +31,4 @@ Users can search and apply for jobs, while employers can post new job openings.
    # Future Plans 
   - Build user interface and navigation.
   - Impliment Job search and posting Features
-  - Connect Frontend With Firebase Interface. 
+  - Link frontend with MySQL database 
