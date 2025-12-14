@@ -13,17 +13,25 @@
       referrerpolicy="no-referrer"
     />
 
+    <base href="home.php">
+
     <title>Job Opportunity System</title>
   </head>
   <body>
+    <?php session_start(); ?>
     <header>
       <div class="logo"><i class="fa-solid fa-briefcase"></i>Jobs Portal</div>
       <nav>
-        <a href="#">Home</a>
+        <a href="home.php">Home</a>
         <a href="#">Jobs</a>
         <a href="#">Companies</a>
-        <a href="login.html">Log In</a>
-        <button id="signup-btn1" class="signup">Sign Up</button>
+        <?php if(isset($_SESSION['user_id'])): ?>
+          <a href="dashboard.php">Dashboard</a>
+          <a href="logout.php">Sign Out</a>
+        <?php else: ?>
+          <a href="signin.html">Log In</a>
+          <a href="signup.html" class="signup">Sign Up</a>
+        <?php endif; ?>
       </nav>
       <div class="hamburger" id="menu-toggle">&#9776;</div>
 
@@ -31,11 +39,16 @@
         <!-- Mobile nav below header -->
         <div class="close-btn" id="close-menu">&times;</div>
         <!-- X button -->
-        <a href="home.html">Home</a>
-        <a href="jobs.html">Jobs</a>
-        <a href="companies.html">Companies</a>
-        <a href="login.html">Log In</a>
-        <button id="signup-btn2" iclass="signup">Sign Up</button>
+        <a href="home.php">Home</a>
+        <a href="#">Jobs</a>
+        <a href="#">Companies</a>
+        <?php if(isset($_SESSION['user_id'])): ?>
+          <a href="dashboard.php">Dashboard</a>
+          <a href="logout.php">Sign Out</a>
+        <?php else: ?>
+          <a href="signin.html">Log In</a>
+          <a href="signup.html" class="signup">Sign Up</a>
+        <?php endif; ?>
       </nav>
     </header>
 
