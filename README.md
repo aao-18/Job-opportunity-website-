@@ -14,10 +14,11 @@ Users can search and apply for jobs, while employers can post new job openings.
 
 # Tools and technologies 
 - IDE: Visual Studio Code
+- Languages: Frontend(HTML, CSS, JS), Backend()
 - Frameworks: React (Frontend), Node.js (Backend)
 - Version Control : Git and GitHub 
 - Design Tool : Figma
-- Database : Firebase
+- Database : MySQL
 
  
  # Repository Setup
