@@ -13,8 +13,8 @@ const Dashboard = () => {
           <img
             onClick={(e) => navigate("/")}
             className=" max-sm:w-32 items-center gap-3"
-            src={assets.logo}
-            alt=""
+            src=""
+            alt="logo"
           />
           <div className=" flex justify-between items-center">
             <p className=" px-2 max-sm:hidden">Welcome , SoftwareDevGroup7</p>
