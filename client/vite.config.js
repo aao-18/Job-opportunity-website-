@@ -7,5 +7,6 @@ export default defineConfig({
     react(),
     
   ],
-  base: '/<Job-opportunity-website->/',
+  base: '/',
+// base: command === 'serve' ? '/' : '/Job-opportunity-website-/',
 })
