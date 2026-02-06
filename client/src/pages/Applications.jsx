@@ -20,7 +20,7 @@ const Applications = () => {
     userData,
     userApplications,
     fetchUserData,
-    fetchUserApplication,
+    fetchUserApplications,
   } = useContext(AppContext);
 
   const updateResume = async () => {
@@ -54,7 +54,7 @@ const Applications = () => {
 
   useEffect(() => {
     if (user) {
-      fetchUserApplication();
+      fetchUserApplications();
     }
   }, [user]);
 
@@ -90,7 +90,7 @@ const Applications = () => {
             <div className=" flex  gap-4">
               <a
                 className=" bg-blue-100 text-blue-600 px-4 py-2 rounded-lg"
-                href={userData.resume}
+                href=""
                 target="_blank"
               >
                 Resume
