@@ -11,20 +11,31 @@ import AddJob from "./pages/AddJob.jsx";
 import ManageJobs from "./pages/ManageJobs.jsx";
 import ViewApplications from "./pages/ViewApplications.jsx";
 import "quill/dist/quill.snow.css";
+import { ToastContainer, toast } from "react-toastify";
 
 const App = () => {
-  const { showRecruterLogin } = useContext(AppContext);
+  const { showRecruterLogin, companyToken } = useContext(AppContext);
   return (
     <div>
       {showRecruterLogin && <RecruterLogin />}
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/applications" element={<Applications />} />
         <Route path="/apply-jobs/:id" element={<Applyjobs />} />
         <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="add-jobs" element={<AddJob />} />
-          <Route path="manage-jobs" element={<ManageJobs />} />
-          <Route path="view-job-applications" element={<ViewApplications />} />
+          {companyToken ? (
+            <>
+              <Route path="add-jobs" element={<AddJob />} />
+              <Route path="manage-jobs" element={<ManageJobs />} />
+              <Route
+                path="view-job-applications"
+                element={<ViewApplications />}
+              />
+            </>
+          ) : (
+            console.log("dont have auth token")
+          )}
         </Route>
       </Routes>
     </div>

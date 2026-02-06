@@ -19,7 +19,6 @@ const Navbar = () => {
         <img
           onClick={() => navigate("/")}
           className=" cursor-pointer"
-          src=""
           alt="Logo"
         />
         {user ? (
